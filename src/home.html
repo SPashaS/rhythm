@@ -7,7 +7,7 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
-				<div class="page__main-block main-block">
+				<section class="page__main-block main-block">
 					<div class="main-block__container">
 						<div class="main-block__content">
 							<div class="main-block__body">
@@ -49,7 +49,70 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</section>
+				<section class="page__store store">
+					<div class="store__container">
+						<h2 class="store__title title">Check out the <span>Store</span></h2>
+						<div class="store__row row-store">
+							<div class="row-store__header">
+								<h3 class="row-store__title">NEW ON THE BOARD</h3>
+								<a href="#">view all</a>
+							</div>
+							<div class="row-store__body">
+								<article class="row-store__item item-store">
+									<div class="item-store__image">
+										<img src="@img/store/1.png" alt="The Essential Les Pau">
+									</div>
+									<h4 class="item-store__title">The Essential Les Pau</h4>
+									<div class="item-store__price">1,299.00</div>
+								</article>
+								<article class="row-store__item item-store">
+									<div class="item-store__image">
+										<img src="@img/store/2.png" alt="J-45 Standard">
+									</div>
+									<h4 class="item-store__title">J-45 Standard</h4>
+									<div class="item-store__price">1,699.00</div>
+								</article>
+								<article class="row-store__item item-store">
+									<div class="item-store__image">
+										<img src="@img/store/3.png" alt="Hummingbird Standard">
+									</div>
+									<h4 class="item-store__title">Hummingbird Standard</h4>
+									<div class="item-store__price">2,099.00</div>
+								</article>
+							</div>
+						</div>
+						<div class="store__row row-store">
+							<div class="row-store__header">
+								<h3 class="row-store__title">TOP SELLING</h3>
+								<a href="#">view all</a>
+							</div>
+							<div class="row-store__body">
+								<article class="row-store__item item-store">
+									<div class="item-store__image">
+										<img src="@img/store/4.png" alt="Active Precision Bass® PH V">
+									</div>
+									<h4 class="item-store__title">Active Precision Bass® PH V</h4>
+									<div class="item-store__price">4,199.00</div>
+								</article>
+								<article class="row-store__item item-store">
+									<div class="item-store__image">
+										<img src="@img/store/5.png" alt="Redondo Special">
+									</div>
+									<h4 class="item-store__title">Redondo Special</h4>
+									<div class="item-store__price">2,800.00</div>
+								</article>
+								<article class="row-store__item item-store">
+									<div class="item-store__image">
+										<img src="@img/store/6.png" alt="Professional II Stratocaster®">
+									</div>
+									<h4 class="item-store__title">Professional II Stratocaster®</h4>
+									<div class="item-store__price">3,199.00</div>
+								</article>
+							</div>
+						</div>
+					</div>
+				</section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>

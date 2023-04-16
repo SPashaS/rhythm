@@ -4,13 +4,22 @@
   // .page__main-block
   &__main-block {
   }
+
+  // .page__store
+  &__store {
+  }
 }
+
+//====================================================================================================
 .main-block {
   min-height: rem(630);
   position: relative;
-  padding-bottom: rem(40);
-  @media (min-width:$mobileSmall){
+  padding-bottom: rem(50);
+  @media (min-width:$tablet){
       padding-bottom: rem(160);
+  }
+  @media (min-width:$pc){
+    padding-bottom: rem(220); 
   }
   // .main-block__container
   &__container {
@@ -130,6 +139,7 @@
     @media (min-width:$mobile){
       position: relative;
       height: rem(586);
+      padding-bottom: 0;
       transform: translateX(rem(15));
     }
     @media (min-width:$tablet){
@@ -194,6 +204,96 @@
 }
 
 //====================================================================================================
+
+.store {
+  padding-bottom: rem(180);
+  // .store__container
+  &__container {
+  }
+
+  // .store__title
+  &__title {
+  }
+
+  // .store__row
+  &__row {
+  }
+}
+
+.row-store {
+  &:not(:last-child) {
+    margin-bottom: rem(55);
+    @media (min-width:$tablet){
+      margin-bottom: rem(95);
+    }
+  }
+  // .row-store__header
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      font-weight: 500;
+      font-size: rem(17);
+      color: var(--second-text-color);
+      @media (min-width:$tablet){
+        font-size: rem(20);
+      }
+    }
+  }
+
+  // .row-store__title
+
+  &__title {
+    font-size: rem(17);
+    letter-spacing: 0.08em;
+    color: var(--title-color);
+    font-weight: 600;
+    @media (min-width:$tablet){
+      font-size: rem(20);
+    }
+  }
+
+  // .row-store__body
+  &__body {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(rem(290),1fr));
+    column-gap: rem(25);
+    @media (min-width:$tablet){
+      grid-template-columns: repeat(auto-fill, minmax(rem(365),1fr));
+    }
+  }
+
+  // .row-store__item
+  &__item {
+  }
+}
+
+.item-store {
+  // .item-store__image
+  &__image {
+    max-width: rem(365);
+    min-height: rem(152);
+    img {
+      width: 100%;
+    }
+  }
+
+  // .item-store__title
+  &__title {
+    font-weight: 500;
+    color: var(--title-color);
+  }
+
+  // .item-store__price
+
+  &__price {
+    &::before{
+      content:'$';
+    }
+  }
+}
 
 //====================================================================================================
 
