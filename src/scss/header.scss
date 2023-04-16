@@ -1,12 +1,20 @@
 //====================================================================================================
 .header {
-	padding: rem(35) 0;
-	@media (min-width: $mobile) {
+	position: absolute;
+	z-index: 30;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: rem(15) 0;
+	@media (min-width:$mobile){
+		padding: rem(30) 0;
+	}
+	@media (min-width: $tablet) {
 		padding: rem(60) 0;
 	}
 	// .header__container
 	&__container {
-		@media (min-width: $mobile) {
+		@media (min-width: $tablet) {
 			display: flex;
 		}
 	}
@@ -16,7 +24,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		@media (min-width: $mobile) {
+		@media (min-width: $tablet) {
 			column-gap: rem(40);
 			justify-content: space-between;
 			flex: 0  0 percent(563,1200);
@@ -51,7 +59,7 @@
 
 	// .menu__body
 	&__body {
-		@media (max-width: $mobile) {
+		@media (max-width: $tablet) {
 			position: fixed;
 			z-index: 51;
 			top: 0;
@@ -76,7 +84,7 @@
 		display: flex;
 		align-items: center;
 		flex-direction: column;
-		@media (min-width: $mobile) {
+		@media (min-width: $tablet) {
 			flex-direction: row;
 		}
 	}
@@ -97,7 +105,7 @@
 			opacity: 0.4;
 			pointer-events: visible;
 		}
-		@media (min-width: $mobile) {
+		@media (min-width: $tablet) {
 			display: none;
 		}
 	}
@@ -113,10 +121,13 @@
 		font-size: rem(25);
 		display: inline-block;
 		color: #ffffff;
-		@media (min-width:$mobile){
-			padding: 0 rem(28); 
+		@media (min-width:$tablet){
+			padding: 0 rem(14); 
 			color: var(--main-text-color);
 			font-size: rem(16);
+		}
+		@media (min-width:$pc){
+			padding: 0 rem(28); 
 		}
 	}
 }
@@ -140,7 +151,7 @@
 	.menu-open & {
 		background-color: #ffffff;
 	}
-	@media (min-width: $mobile) {
+	@media (min-width: $tablet) {
 		display: none;
 	}
 	&__inner {

@@ -1,3 +1,204 @@
 //====================================================================================================
+.page {
+
+  // .page__main-block
+  &__main-block {
+  }
+}
+.main-block {
+  min-height: rem(630);
+  position: relative;
+  padding-bottom: rem(40);
+  @media (min-width:$mobileSmall){
+      padding-bottom: rem(160);
+  }
+  // .main-block__container
+  &__container {
+    display: flex;
+    
+    flex-direction: column-reverse;
+    @media (min-width:$mobile){
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+  }
+
+  // .main-block__content
+  &__content {
+    padding-top: rem(50);
+    @media (min-width:$mobileSmall){
+      padding-top: 60%;
+      
+    }
+    @media (min-width:$mobile){
+      padding-top: rem(230);
+      flex: 0 0 rem(370);
+    }
+    @media (min-width:$tablet){
+      flex: 0 0 50%;
+    }
+  }
+
+  // .main-block__body
+  &__body {
+    max-width: rem(350);
+    @media (min-width:$mobileSmall){
+      padding-left: rem(50);
+    }
+    @media (min-width:rem(630)){
+      padding-left: 0;
+      max-width: none;
+      text-align: center;
+    }
+    @media (min-width:$mobile){
+      text-align: left;
+      padding-left: 0;
+    }
+  }
+
+  // .main-block__title
+
+  &__title {
+    margin-bottom: rem(16);
+  }
+
+  // .main-block__text
+  &__text {
+    margin-bottom: rem(30);
+    @media (min-width:$tablet){
+      max-width: rem(400); 
+    }
+  }
+
+  // .main-block__footer
+  &__footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    column-gap: rem(40);
+    @media (min-width:$mobileSmall){
+        flex-direction: row;
+        padding-left: rem(50);
+    }
+    @media (min-width:rem(630)){
+      padding-left: 0;
+      justify-content: center;
+    }
+    @media (min-width:$mobile){
+        justify-content: start;
+    }
+  }
+
+  // .main-block__button
+  &__button {
+    margin-bottom: rem(25);
+    @media (min-width:$mobileSmall){
+      margin-bottom: 0; 
+    }
+  }
+  // .main-block__icons
+  &__icons {
+    display: flex;
+    align-items: center;
+    column-gap: rem(28);
+    a {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  // .main-block__poster
+  &__poster {
+    position: relative;
+    margin: 0 rem(-15);
+    // height: rem(350);
+    padding-bottom: 115%;
+    @media (min-width:$mobileSmall){
+      margin: 0;
+      padding-bottom: rem(350);
+      position: absolute;
+      top: 0;
+      // left: 50%;
+      right: 0;
+      width: 70%;
+      // height: rem(300);
+      padding-bottom: 50%;
+      // transform: translateX(-25%);
+    }
+
+    @media (min-width:$mobile){
+      position: relative;
+      height: rem(586);
+      transform: translateX(rem(15));
+    }
+    @media (min-width:$tablet){
+      width: rem(670);
+    }
+    @media (min-width:$pc){
+      position: absolute;
+      left: 50%;
+      right: auto;
+      transform: translateX(rem(50)); 
+    }
+    @media (min-width:rem(1440)){
+      
+    }
+    img {
+      width: 100%;
+      border-radius: 0 0 rem(35) rem(110);
+      overflow: hidden;
+      object-fit: cover;
+      object-position: 50% 85%;
+      @media (min-width:$mobile){
+        border-radius: 0 0 rem(65) rem(210);
+      }
+      @media (min-width:$tablet){
+        border-radius: 0 0 rem(80) rem(250);
+      }
+      @media (min-width:$pc){
+        border-radius: 0 0 rem(151) rem(360);
+      }
+    }
+  }
+
+  // .main-block__player
+  &__player {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translate(96%, 50%);
+    @media (min-width:$mobile){
+      transform: translate(rem(50), 50%);
+    }
+  }
+}
+
+.player {
+  width: rem(60);
+  height: rem(60);
+  border-radius: 50%;
+  background-color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (min-width:$mobile){
+    width: rem(80);
+    height: rem(80);
+  }
+  audio {
+    height: rem(80);
+    display: none;
+  }
+}
+
+//====================================================================================================
+
+//====================================================================================================
+
+//====================================================================================================
+
+//====================================================================================================
 
 //====================================================================================================
