@@ -17,6 +17,9 @@
   &__categories {
   }
 
+  // .page__best-brands
+  &__best-brands {
+  }
 }
 
 //====================================================================================================
@@ -443,7 +446,37 @@
 //====================================================================================================
 
 
+.best-brands {
+  padding-bottom: rem(100);
+  @media (min-width:$mobile){
+    padding-bottom: rem(200);
+  }
+  
+  // .best-brands__container
+  &__container {
+  }
 
+  // .best-brands__title
+  &__title {
+  }
+
+  // .best-brands__body
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(155), 1fr));
+    align-items: center;
+    justify-items: center;
+    gap: rem(25);
+    @media (min-width:$mobile){
+      grid-template-columns: repeat(4,1fr);
+    }
+  }
+
+  // .best-brands__item
+
+  &__item {
+  }
+}
 
 //====================================================================================================
 
