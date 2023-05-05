@@ -20,6 +20,11 @@
   // .page__best-brands
   &__best-brands {
   }
+
+  // .page__why-try-rhythm
+
+  &__why-try-rhythm {
+  }
 }
 
 //====================================================================================================
@@ -479,5 +484,69 @@
 }
 
 //====================================================================================================
+
+.why-try-rhythm {
+  background-color: #121212;
+  padding-top: rem(95);
+  padding-bottom: rem(95);
+  // .why-try-rhythm__container
+  &__container {
+  }
+
+  // .why-try-rhythm__title
+  &__title {
+    color: #ffffff;
+  }
+
+  // .why-try-rhythm__body
+  &__body {
+    display: grid;
+    row-gap: rem(50);
+    column-gap: rem(10);
+    @media (min-width:$mobile){
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  // .why-try-rhythm__item
+  &__item {
+    display: grid;
+    justify-items: center;
+  }
+
+  // .why-try-rhythm__item-image
+  &__item-image {
+    width: rem(72);
+    height: rem(72);
+    border-radius: rem(20);
+    background-color: #262626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: rem(20);
+    @media (min-width:$mobile){
+      margin-bottom: rem(40);
+    }
+  }
+
+  // .why-try-rhythm__item-title
+
+  &__item-title {
+    font-weight: 600;
+    font-size: rem(18);
+    line-height: math.div(27 ,18 );
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: rem(12);
+  }
+
+  // .why-try-rhythm__item-text
+  &__item-text {
+    text-align: center;
+    max-width: rem(230);
+  }
+}
+
 
 //====================================================================================================
