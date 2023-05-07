@@ -25,6 +25,10 @@
 
   &__why-try-rhythm {
   }
+
+  // .page__testimonials
+  &__testimonials {
+  }
 }
 
 //====================================================================================================
@@ -550,3 +554,202 @@
 
 
 //====================================================================================================
+
+.testimonials {
+  padding-top: rem(100);
+  padding-bottom: rem(100);
+  @media (min-width:$tablet){
+    padding-top: rem(240);
+    padding-bottom: rem(240);
+  }
+  
+  // .testimonials__container
+
+  &__container {
+  }
+
+  // .testimonials__title
+
+  &__title {
+  }
+
+  // .testimonials__slider
+
+  &__slider {
+    position: relative;
+  }
+
+  // .testimonials__swiper
+
+  &__swiper {
+    
+  }
+
+  // .testimonials__slide
+
+  &__slide {
+  }
+
+  // .testimonials__slider-pagination
+  &__slider-pagination {
+    // background: #ffffff;
+    position: relative;
+    width: 100px;
+    height: 40px;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    column-gap: rem(10);
+    padding: 0 rem(10);
+    border-radius: rem(10);
+    overflow: hidden;
+    @media (min-width:$tablet){
+      left: inherit;
+      right: 0;
+      bottom: rem(25);
+      position: absolute;
+    }
+
+    .swiper-pagination-bullet {
+      flex: 0 0 rem(10);
+      height: rem(16);
+      background-color: #C4C4C4;
+      border-radius: rem(20);
+      transition: all 0.3s ease 0s;
+    }
+    .swiper-pagination-bullet-active {
+      flex: 0 0 rem(24);
+      height: rem(12);
+      background-color: var(--accent-color);
+    }
+  }
+}
+
+.slide {
+  @media (min-width:$tablet){
+    display: flex;
+    padding-left: rem(100);
+    padding-right: rem(15);
+    justify-content: space-between;
+    column-gap: rem(20);
+  }
+  
+  // .slide__column
+  &__column {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+
+    @media (min-width:$tablet){
+      &:first-child {
+        flex: 0 0 percent(407,1075);
+        justify-content: flex-end;
+      }
+      &:last-child {
+        flex: 0 0 percent(534,1075);
+        align-items: center;
+      }
+    }
+    
+  }
+  // .slide__image
+  &__image {
+    width: rem(191);
+    height: rem(200);
+    @media (min-width:$tablet){
+      width: rem(326);
+      height: rem(341);
+    }
+    
+    &::before {
+      content:'';
+      position: absolute;
+      top: 7%;
+      left: 50%;
+      width: rem(150);
+      height: rem(150);
+      background: #FF6428;
+      border-radius: rem(20) 0 rem(200) rem(200);
+      transform: rotate(-7.72deg) translateX(rem(-25));
+      @media (min-width:$tablet){
+        border-radius: rem(40) 0 rem(400) rem(400);
+        width: rem(285);
+        height: rem(258);
+        top: 15%;
+        left: 0;
+      }
+    }
+    img {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      border-radius: rem(200)
+    }
+  }
+
+  // .slide__card
+  &__card {
+    line-height: 1.6;
+  }
+
+  // .slide__text-wrapper
+  &__text-wrapper {
+    @media (min-width:$tablet){
+      height: rem(185);
+      margin-bottom: rem(25);
+      overflow: hidden;
+    }
+    
+  }
+
+  // .slide__text
+  &__text {
+    padding: rem(20) 0;
+    font-size: rem(18);
+    
+    @media (min-width:$tablet){
+      padding: 0;
+      font-size: rem(24);
+      padding-right: rem(10);
+      overflow-y: scroll;
+      height: 100%;
+  
+      &::-webkit-scrollbar {
+        width: rem(3); /* ширина для вертикального скролла */
+        height: rem(3); /* высота для горизонтального скролла */
+        border-radius: rem(2);
+        // background-color: #45824500;
+      }
+    
+      /* ползунок скроллбара */
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--accent-color);
+      }
+    }
+    
+  }
+
+  // .slide__footer
+  &__footer {
+  }
+
+  // .slide__name
+  &__name {
+    font-weight: 600;
+    font-size: rem(24);
+    color: #000000;
+    margin-bottom: rem(8);
+  }
+
+  // .slide__profession
+  &__profession {
+    font-weight: 500;
+    font-size: rem(18);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+}
