@@ -29,6 +29,12 @@
   // .page__testimonials
   &__testimonials {
   }
+
+  // .page__app
+  &__app {
+  }
+
+
 }
 
 //====================================================================================================
@@ -753,3 +759,109 @@
     letter-spacing: 0.08em;
   }
 }
+
+.app {
+  padding-bottom: rem(60);
+  @media (min-width:$tablet){
+    padding-bottom: rem(120);
+  }
+  
+  // .app__container
+  &__container {
+  }
+
+  // .app__row
+  &__row {
+    @media (min-width:$tablet){
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: rem(30);
+      padding: 0 rem(15);
+    }
+    
+  }
+
+  // .app__column
+  &__column {
+    &:first-child {
+      flex: 0 0 percent(484,1170);
+    }
+    &:last-child {
+      flex: 0 0 percent(568,1170);
+    }
+  }
+
+  // .app__title
+  &__title {
+    @media (min-width:$tablet){
+      text-align: left;
+    }
+    
+  }
+
+  // .app__buttons
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: rem(15);
+    column-gap: rem(25);
+    padding-bottom: rem(40);
+    @media (min-width:$tablet){
+      justify-content: flex-start; 
+    }
+  }
+
+  // .app__button
+  &__button {
+  }
+
+  // .app__images
+  &__images {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    column-gap: rem(15);
+    padding: 0 rem(60);
+    @media (min-width:$mobile){
+      column-gap: rem(35);
+    }
+    &::before{
+      content:'';
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: rem(360);
+      height: rem(258);
+      border-radius: 50%;
+      background-color: var(--accent-color);
+      @media (min-width:$mobile){
+        width: rem(568);
+        height: rem(354);
+      }
+    }
+    img {
+      border-radius: rem(11);
+      width: rem(153);
+      height: rem(331);
+      filter: drop-shadow(0 rem(4) rem(80) rgba(0, 0, 0, 0.08));
+      &:last-child {
+        margin-top: rem(35);
+        @media (min-width:$mobile){
+          margin-top: rem(75);
+        }
+      }
+      @media (min-width:$mobile){
+        border-radius: rem(22);
+        width: rem(213);
+        height: rem(461);
+      }
+    }
+  }
+
+}
+
+
