@@ -1,3 +1,133 @@
 //====================================================================================================
+.footer {
+  padding-top: rem(40);
+  padding-bottom: rem(30);
+  @media (min-width:$tablet){
+    padding-top: rem(80);
+    padding-bottom: rem(40);
+  }
+  background-color: #EEEEEE;
+  // .footer__container
+
+  &__container {
+  }
+
+  // .footer__row
+  &__row {
+    display: grid;
+    gap: rem(20);
+    justify-items: center;
+    padding-bottom: rem(40);
+    @media (min-width:$tablet){
+      padding: 0 rem(40) rem(80) rem(40);
+      grid-template-columns: rem(365) rem(375) rem(160);
+      justify-content: space-between;
+    }
+  }
+
+  // .footer__left
+  &__left {
+  }
+
+  // .footer__logo
+  &__logo {
+    column-gap: rem(24);
+    margin-bottom: rem(15);
+    @media (min-width:$tablet){
+      margin-bottom: rem(28);
+    }
+    
+    svg {
+      width: rem(40);
+      height: rem(40);
+    }
+    span {
+      font-size: rem(40);
+      line-height: math.div(48 ,40 );
+      font-weight: 600;
+    }
+  }
+
+
+  // .footer__contacts
+  &__contacts {
+    display: grid;
+    justify-items: start;
+    row-gap: rem(10);
+    @media (min-width:$tablet){
+      row-gap: rem(20);
+    }
+    
+  }
+
+
+
+  // .footer__icon-link
+  &__icon-link {
+    display: inline-flex;
+    align-items: center;
+    column-gap: rem(10);
+    @media (min-width:$tablet){
+      column-gap: rem(20);
+    }
+  }
+
+  // .footer__center
+  &__center {
+    display: flex;
+    column-gap: rem(55);
+  }
+
+  // .footer__column
+  &__column {
+    justify-content: space-between;
+    @media (min-width:$tablet){
+      flex: 0 0 rem(160);
+    }
+    
+  }
+
+  // .footer__title
+  &__title {
+    margin-bottom: rem(20);
+    font-weight: 600;
+    font-size: rem(18);
+    line-height: math.div(27,18);
+    text-transform: uppercase;
+    color: #121212;
+  }
+
+  // .footer__list
+  &__list {
+    li {
+      &:not(:last-child) {
+        margin-bottom: rem(15);
+      }
+    }
+  }
+
+  // .footer__right
+  &__right {
+    display: flex;
+  }
+
+  // .footer__social
+  &__social {
+    display: flex;
+    column-gap: rem(30)
+  }
+
+  // .footer__copy
+  &__copy {
+    text-align: center;
+  }
+}
 
 //====================================================================================================
+
+.social-footer-link {
+  &::before{
+    font-size: 33px;
+  }
+}
+

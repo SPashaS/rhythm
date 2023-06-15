@@ -55,8 +55,8 @@ export function headerScroll() {
 	addWindowScrollEvent = true;
 	const header = document.querySelector('header.header');
 	const headerShow = header.hasAttribute('data-scroll-show'); // Добавить
-	const headerShowTimer = header.dataset.scrollShow ? header.dataset.scrollShow : 500;
-	const startPoint = header.dataset.scroll ? header.dataset.scroll : 1;
+	const headerShowTimer = header.dataset.scrollShow ? header.dataset.scrollShow : 1;
+	const startPoint = header.dataset.scroll ? header.dataset.scroll : 100;
 	let scrollDirection = 0;
 	let timer;
 	document.addEventListener("windowScroll", function (e) {

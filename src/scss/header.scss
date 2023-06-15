@@ -5,12 +5,14 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding: rem(15) 0;
+	padding: 15px 0;
+	transition: all 0.3s ease 0s;
+
 	@media (min-width:$mobile){
-		padding: rem(30) 0;
+		padding: 30px 0;
 	}
 	@media (min-width: $tablet) {
-		padding: rem(60) 0;
+		padding: 60px 0;
 	}
 	// .header__container
 	&__container {
@@ -25,8 +27,11 @@
 		justify-content: space-between;
 		align-items: center;
 		@media (min-width: $tablet) {
-			column-gap: rem(40);
+			column-gap: 40px;
 			justify-content: space-between;
+			flex: 0  0 percent(540,1200);
+		}
+		@media (min-width:$pc){
 			flex: 0  0 percent(563,1200);
 		}
 	}
@@ -34,11 +39,9 @@
 
 	// .header__logo
 	&__logo {
-		display: flex;
-		align-items: center;
-		column-gap: rem(12);
+		column-gap: 12px;
 		span {
-			font-size: rem(24);
+			font-size: 24px;
 			line-height: math.div(29,24);
 		}
 	}
@@ -48,11 +51,10 @@
 	}
 }
 
-.logo {
-}
-
 .menu {
-
+	@media (min-width:$tablet){
+		// flex-grow: 1; 
+	}
 	// .menu__icon
 	&__icon {
 	}
@@ -65,8 +67,8 @@
 			top: 0;
 			right: 0;
 			height: 100%;
-			padding: rem(30);
-			width: rem(320);
+			padding: 30px;
+			width: 320px;
 			transform: translateX(100%);
 			transition: all 0.5s ease 0s;
 			background-color: var(--accent-color);
@@ -77,6 +79,7 @@
 				transform: translateX(0);
 			}
 		}
+		
 	}
 
 	// .menu__list
@@ -86,6 +89,10 @@
 		flex-direction: column;
 		@media (min-width: $tablet) {
 			flex-direction: row;
+			column-gap: 20px;
+		}
+		@media (min-width:$pc){
+			column-gap: 55px;
 		}
 	}
 
@@ -117,17 +124,14 @@
 
 	// .menu__link
 	&__link {
-		padding: rem(14) rem(28);
-		font-size: rem(25);
+		padding: 14px 28px;
+		font-size: 25px;
 		display: inline-block;
 		color: #ffffff;
 		@media (min-width:$tablet){
-			padding: 0 rem(14); 
+			padding: 0 5px; 
 			color: var(--main-text-color);
-			font-size: rem(16);
-		}
-		@media (min-width:$pc){
-			padding: 0 rem(28); 
+			font-size: 16px;
 		}
 	}
 }
@@ -145,8 +149,8 @@
 	justify-content: center;
 	background-color: var(--accent-color);
 	border-radius: 55%;
-	width: rem(40);
-	height: rem(40);
+	width: 40px;
+	height: 40px;
 	cursor: pointer;
 	.menu-open & {
 		background-color: #ffffff;
